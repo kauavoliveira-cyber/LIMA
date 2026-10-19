@@ -1,0 +1,1 @@
+O turquesa com branco funciona muito bem porque transmite confiança, inovação. Além disso, o contraste deixa o site limpo, fácil de ler e destaca muito os botões de ação. Perfect pra saúde, tecnologia e viagens!

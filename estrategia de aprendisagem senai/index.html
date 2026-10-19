@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>SENAI - Completo</title>
+  <style>
+    /* // Reset básico de margens */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f6;
+      color: #333;
+    }
+
+    /* // CABEÇALHO */
+    header {
+      background-color: #ffffff;
+      padding: 15px 40px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* // Caixinha do Logo SENAI */
+    .logo {
+      display: inline-block;
+      border: 1px solid #008080;
+      padding: 5px 12px;
+      color: #008080;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .logo span {
+      display: block;
+      font-size: 8px;
+      color: #777;
+      font-weight: normal;
+    }
+
+    /* // Menu de Links do Topo */
+    nav {
+      display: inline-block;
+      margin-left: 20px;
+      vertical-align: middle;
+    }
+
+    nav a {
+      color: #008080;
+      text-decoration: none;
+      margin-right: 15px;
+      font-size: 13px;
+    }
+
+    nav a.ativo {
+      font-weight: bold;
+      border-bottom: 2px solid #008080;
+      padding-bottom: 2px;
+    }
+
+    /* // Campo de Pesquisa */
+    .caixa-busca {
+      float: right;
+      border: 1px solid #ccc;
+      padding: 4px 8px;
+      background-color: #fff;
+      margin-top: 5px;
+    }
+
+    .caixa-busca input {
+      border: none;
+      outline: none;
+      font-size: 12px;
+      width: 120px;
+    }
+
+    /* // SEÇÃO PRINCIPAL (HERO / BANNER) */
+    .hero {
+      padding: 40px;
+      clear: both;
+    }
+
+    .hero-coluna-texto {
+      width: 45%;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .hero-coluna-texto small {
+      font-size: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .hero-coluna-texto h1 {
+      color: #008080;
+      font-size: 28px;
+      margin: 10px 0;
+    }
+
+    .hero-coluna-texto p {
+      color: #008080;
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .btn-escuro {
+      background-color: #4a4a4a;
+      color: #fff;
+      padding: 10px 18px;
+      border: none;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* // Espaço para o Vídeo Principal */
+    .hero-coluna-video {
+      width: 48%;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 4%;
+      text-align: center;
+    }
+
+    .hero-coluna-video video {
+      width: 100%;
+      height: 220px;
+      background-color: #ddd;
+    }
+
+    .hero-coluna-video small {
+      display: block;
+      font-size: 10px;
+      color: #777;
+      margin-top: 6px;
+    }
+
+    /* // SEÇÃO NOSSOS CURSOS */
+    .secao-cursos {
+      background-color: #ffffff;
+      padding: 40px;
+      clear: both;
+    }
+
+    .secao-cursos h2 {
+      color: #008080;
+      font-size: 22px;
+    }
+
+    .secao-cursos p.subtitulo {
+      color: #666;
+      font-size: 12px;
+      margin: 5px 0 25px 0;
+    }
+
+    /* // Caixas dos 4 Cursos */
+    .card-curso {
+      width: 23%;
+      display: inline-block;
+      border: 1px solid #e0e0e0;
+      margin-right: 1.5%;
+      vertical-align: top;
+      background-color: #fff;
+    }
+
+    /* // Imagem no topo do card */
+    .card-curso img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      background-color: #e5e5e5;
+    }
+
+    .card-conteudo {
+      padding: 15px;
+    }
+
+    .card-conteudo h3 {
+      color: #008080;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .card-conteudo p {
+      color: #666;
+      font-size: 11px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+      height: 35px; /* // Mantém o alinhamento de altura */
+    }
+
+    .btn-saiba-mais {
+      background-color: transparent;
+      border: 1px solid #008080;
+      color: #008080;
+      padding: 6px 14px;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* // RODAPÉ (FOOTER) */
+    footer {
+      background-color: #eeeef0;
+      padding: 30px 40px;
+      border-top: 1px solid #ddd;
+      clear: both;
+    }
+
+    .coluna-footer {
+      width: 30%;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .coluna-footer p.legenda {
+      font-size: 10px;
+      color: #008080;
+      margin-top: 8px;
+    }
+
+    .coluna-footer h4 {
+      font-size: 12px;
+      color: #008080;
+      margin-bottom: 12px;
+    }
+
+    .coluna-footer a {
+      color: #008080;
+      text-decoration: none;
+      font-size: 11px;
+      display: inline-block;
+      width: 45%;
+      margin-bottom: 6px;
+    }
+
+    /* // Círculos das Redes Sociais */
+    .circulo-redes {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- // 1. CABEÇALHO COM NAV E BUSCA -->
+  <header>
+    <div class="logo">
+      SENAI
+      <span>Representação do logo</span>
+    </div>
+
+    <nav>
+      <a href="#" class="ativo">Início</a>
+      <a href="#">Cursos</a>
+      <a href="#">Oportunidades</a>
+      <a href="#">Sobre o SENAI</a>
+      <a href="#">carga horaria</a>
+      <a href="#">Contato</a>
+    </nav>
+
+    <div class="caixa-busca">
+      <input type="text" placeholder="Pesquisar no site"> 🔍
+    </div>
+  </header>
+
+  <!-- // 2. BANNER PRINCIPAL COM TEXTO E VÍDEO -->
+  <div class="hero">
+    
+    <div class="hero-coluna-texto">
+      <small>EDUCAÇÃO PROFISSIONAL</small>
+      <h1>O SENAI prepara você para o futuro</h1>
+      <p>Desenvolva conhecimentos e habilidades para o mundo do trabalho. Conheça possibilidades de formação que conectam aprendizado, prática e indústria.</p>
+      <button class="btn-escuro">Conheça nossos cursos</button>
+    </div>
+
+    <!-- // ESPAÇO DO VÍDEO -->
+    <div class="hero-coluna-video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J--7IsdWSwY?si=SJ4iDlkY21A0eHYD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <small>Espaço reservado • Educação e indústria</small>
+    </div>
+
+  </div>
+  
+
+  <!-- // 3. SEÇÃO DOS CURSOS (as 4 imagens) -->
+  <div class="secao-cursos">
+    <h2>Nossos Cursos</h2>
+    <p class="subtitulo">Explore áreas de formação e descubra novos caminhos para sua vida profissional.</p>
+
+    <!-- // imagem 1 -->
+    <div class="card-curso">
+      <img src="file:///c%3A/LIMA/estrategia%20de%20aprendisagem%20senai/aprendizagem_industrial.png" alt="Aprendizagem Industrial" style="width: 100%; height: auto;">
+
+      <div class="card-conteudo">
+        <h3>Aprendizagem Industrial</h3>
+        <p>Primeiros passos na indústria, com fundamentos e atividades práticas.</p>
+        <button class="saiba-mais">Saiba mais</button>
+      </div>
+    </div>
+
+    <!-- // imagem 2 -->
+    <div class="card-curso">
+      <img src="file:///c%3A/LIMA/estrategia%20de%20aprendisagem%20senai/tecnico_em_informatica.png" alt="Técnico em Informática
+      " style="width: 100%; height: auto;">
+      <div class="card-conteudo">
+        <h3>Técnico em Informática</h3>
+        <p>Conhecimentos em programação, sistemas e soluções digitais.</p>
+        <button class="saiba-mais">Saiba mais</button>
+      </div>
+    </div>
+
+    <!-- // iamgem 3 -->
+    <div class="card-curso">
+      <img src="file:///c%3A/LIMA/estrategia%20de%20aprendisagem%20senai/mecanica.png" alt="Mecânica Industrial" style="width: 100%; height: auto;">
+      <div class="card-conteudo">
+        <h3>Mecânica Industrial</h3>
+        <p>Introdução aos processos, equipamentos e à manutenção industrial.</p>
+        <button class="saiba-mais">Saiba mais</button>
+      </div>
+    </div>
+
+    <!-- // imagem 4 -->
+    <div class="card-curso" style="margin-right: 0;">
+      <img src="file:///c%3A/LIMA/estrategia%20de%20aprendisagem%20senai/eletrotecnica.png" alt="Eletrotécnica" style="width: 100%; height: auto;">
+      <div class="card-conteudo">
+        <h3>Eletrotécnica</h3>
+        <p>Fundamentos de eletricidade, instalações e sistemas elétricos.</p>
+        <button class="saiba-mais">Saiba mais</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- // 4. RODAPÉ COMPLETO -->
+  <footer>
+    <div class="coluna-footer">
+      <div class="logo">
+        SENAI
+        <span>Representação do logo</span>
+      </div>
+      <p class="legenda">Serviço Nacional de Aprendizagem Industrial</p>
+    </div>
+
+    <div class="coluna-footer">
+      <h4>Navegue pelo site</h4>
+      <a href="#">Início</a>
+      <a href="#">Sobre o SENAI</a>
+      <a href="#">Cursos</a>
+      <a href="#">Contato</a>
+      <a href="#">Oportunidades</a>
+    </div>
+
+    <div class="coluna-footer">
+      <h4>Acompanhe o SENAI</h4>
+      <div class="circulo-redes"></div>
+      <div class="circulo-redes"></div>
+      <div class="circulo-redes"></div>
+      <div class="circulo-redes"></div>
+    </div>
+  </footer>
+
+</body>
+</html>
