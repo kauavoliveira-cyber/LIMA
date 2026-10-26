@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.destaque {
+    color: blue;
+    font-weight: bold;
+}
+
+#titulo-principal {
+    color: red;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Arial, sans-serif;
+    color: darkgreen;
+}
+
+.imagem {
+    width: 300px;
+    height: auto;
+    border: 2px solid black;
+    display: block;
+    margin: auto;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-image: url("neymar.png");
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: lightgray;
+    border-spacing: 10px;
+}
+
+/* link normal */
+a:link {
+    color: blue;
+}
+
+/* link já visitado */
+a:visited {
+    color: yellow;
+}
+
+/* quando o mouse passa por cima */
+a:hover {
+    color: red;
+}
+
+/* enquanto o link é clicado */
+a:active {
+    color: orange;
+}
