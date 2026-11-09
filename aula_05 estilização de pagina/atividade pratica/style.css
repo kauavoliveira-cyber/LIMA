@@ -1,0 +1,83 @@
+/* Configurações gerais */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #009AA5;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+/* Menu de navegação */
+nav {
+  background-color: #333;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #009AA5;
+  text-decoration: underline;
+}
+
+/* Conteúdo principal */
+main {
+  background-color: white;
+  padding: 25px;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+h2 {
+  color: #009AA5;
+}
+
+.lista {
+  color: #333;
+}
+
+/* Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #009AA5;
+  color: white;
+}
+
+/* Rodapé */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
